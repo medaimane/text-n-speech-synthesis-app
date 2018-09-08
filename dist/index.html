@@ -11,13 +11,46 @@
 
     <title>TEXT-N-SPEECH | JavaScript & Web Speech API</title>
   </head>
-  <body>
-    <h1>TEXT-N-SPEECH</h1>
+  <body class="bg-dark text-white">
+    
+    
+    <div class="container text-center">
+      <img class="mb-5" src="./assets/img/logo.png" alt="logo image not found" />
+      <div class="row">
+        <div class="col-md-6 mx-auto">
+          <form>
+              <div class="form-group">
+                  <textarea class="form-control" placeholder="Put The Text & Lesten To The Speech"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="rate">Rate</label>
+                <div id="rate-value" class="badge badge-primary float-right">1</div>
+                <input type="range" id="rate" class="custom-range" min="0.5" max="2" value="1" step="0.1">
+              </div>
+
+              <div class="form-group">
+                <label for="pitch">Pitch</label>
+                <div id="pitch-value" class="badge badge-primary float-right">1</div>
+                <input type="range" id="pitch" class="custom-range" min="0" max="2" value="1" step="0.1">
+              </div>
+
+              <div class="form-group">
+                <select id="voice-select" class="form-control"></select>
+              </div>
+
+              <button class="btn btn-outline-light btn-lg btn-block mb-5">Speak It</button>
+          </form>
+        </div>
+      </div>
+    </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="./assets/js/jquery-3.3.1.slim.min.js"></script>
     <script src="./assets/js/popper.min.js"></script>
     <script src="./assets/js/bootstrap.min.js"></script>
+
+    <!-- Main -->
+    <script src="./js/main.js"></script>
   </body>
 </html>
