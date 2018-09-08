@@ -2,6 +2,7 @@
 const synth = window.speechSynthesis;
 
 // DOM Query
+const body = document.querySelector('body');
 const form = document.querySelector('form');
 const textarea = document.querySelector('textarea');
 const voiceSelect = document.querySelector('#voice-select')
@@ -48,12 +49,24 @@ const speak = () => {
     }
 
     if(textarea.value !== '') {
+        
         // Get Speak text
         const speakText = new SpeechSynthesisUtterance(textarea.value);
+
+
+        speakText.onstart = e => {
+            console.log('Start speaking ...')
+            // add animation
+            body.style.background = "#141414 url('./assets/img/back.gif')";
+            body.style.backgroundRepeat = 'repeat-x';
+            body.style.backgroundSize = '100% 100%';
+        }
 
         // Speak end
         speakText.onend = e => {
             console.log('Done speaking ...');
+            // Remeve animation 
+            body.style.background = '#141414';
         }
 
         // Speak error
