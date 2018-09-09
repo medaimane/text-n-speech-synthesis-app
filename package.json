@@ -1,0 +1,31 @@
+{
+  "name": "text-to-speech-synthesis-app",
+  "version": "1.0.0",
+  "description": "Text to speech synthesis app using JavaScript and Web Speech API (Tested for chrome)",
+  "main": "js/main.js",
+  "scripts": {
+    "deploy": "gh-pages -d dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/medaimane/text-n-speech-synthesis-app.git"
+  },
+  "keywords": [
+    "Web",
+    "JS",
+    "Web",
+    "Speech",
+    "API",
+    "Chrome"
+  ],
+  "author": "Mohamed Aimane Skhairi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/medaimane/text-n-speech-synthesis-app/issues"
+  },
+  "homepage": "https://medaimane.github.io/text-n-speech-synthesis-app",
+  "dependencies": {
+    "gh-pages": "^1.2.0"
+  }
+}
